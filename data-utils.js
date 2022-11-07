@@ -15,9 +15,17 @@ export function findFriendByName(name, friends) {
 }
 
 export function addAnimal(name, animals) {
-    const newPet = {
+    const newAnimal = {
         name: name || `Animal #${Math.floor(Math.random() * 1000)}`,
         satisfaction: 1
     };
     animals.push(newAnimal);
+}
+
+export function findAnimalByName(name, animals) {
+    for (let animal of animals) {
+        if (animal.name === name) {
+            return animal;
+        }
+    }
 }

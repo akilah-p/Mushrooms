@@ -7,6 +7,13 @@ const friendInputEl = document.getElementById('friend-input');
 const mushroomsEl = document.querySelector('.mushrooms');
 const addMushroomButton = document.getElementById('add-mushroom-button');
 const addFriendButton = document.getElementById('add-friend-button');
+
+const animalsEl = document.querySelector('.animals');
+const animalInputEl = document.getElementById('animal-input');
+const berryEl = document.querySelector('.berries');
+const addBerryButton = document.getElementById('add-berry-button');
+const addAnimalButton = document.getElementById('add-animal-button');
+
 // initialize state
 
 let mushroomCount = 3;
@@ -40,6 +47,32 @@ addMushroomButton.addEventListener('click', () => {
     } else {
         alert('no luck!');
     }
+});
+
+addBerryButton.addEventListener('click', () => {
+    if (Math.random() > 0.5) {
+        alert('fount a berry!');
+
+        berryCount++
+        displayBerries();
+    } else {
+        alert('no luck!');
+    }
+
+});
+
+addAnimalButton.addEventListener('click', () => {
+    const name = animalInputEl.value;
+    const newAnimal = {
+        name: name || `Animal #${Math.floor(Math.random() * 1000)}`,
+        satisfaction: 1
+    };
+
+    animalData.push(newAnimal);
+
+    animalInputEl.value = '';
+
+    displayAnimals();
 });
 
 addFriendButton.addEventListener('click', () => {
@@ -106,3 +139,5 @@ function displayMushrooms() {
 
 displayFriends();
 displayMushrooms();
+displayBerries();
+displayAnimals();
