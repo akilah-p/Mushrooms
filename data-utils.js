@@ -13,3 +13,11 @@ export function findFriendByName(name, friends) {
         }
     }
 }
+
+export function addAnimal(name, animals) {
+    const newPet = {
+        name: name || `Animal #${Math.floor(Math.random() * 1000)}`,
+        satisfaction: 1
+    };
+    animals.push(newAnimal);
+}
