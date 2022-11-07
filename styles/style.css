@@ -152,7 +152,28 @@ footer {
     padding-right: 1rem;
 }
 
+.animals {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+}
+
 .friend {
+    background-color: skyblue;
+    border: solid 1px black;
+    margin: 5px;
+    border-radius: 20px;
+    height: 100px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.animal {
     background-color: skyblue;
     border: solid 1px black;
     margin: 5px;
@@ -169,12 +190,29 @@ footer {
     font-size: 1.3rem;
 }
 
+.animal .name {
+    font-size: 1.3rem;
+}
+
 .friend .emoji {
     font-size: 3rem;
     line-height: 3rem;
 }
 
+.animal .emoji {
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
 .friend:hover {
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transform: rotate(8deg);
+    background-color: lightblue;
+}
+
+.animal:hover {
     transition: all 0.1s ease-in-out;
     cursor: pointer;
     box-shadow: var(--shadow);
@@ -188,7 +226,23 @@ footer {
     align-items: center;
 }
 
+.add-animal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 .add-friend input {
+    width: 100%;
+    text-align: center;
+    height: 3rem;
+    border: none;
+    font-size: 2rem;
+    border-radius: 10px;
+}
+
+.add-animal input {
     width: 100%;
     text-align: center;
     height: 3rem;
@@ -205,12 +259,28 @@ footer {
     bottom: 200px;
 }
 
+.berries {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 200px;
+}
+
 .mushroom {
     width: 100px;
     height: 100px;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url('../assets/porcini.png');
+}
+
+.berry {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../assets/berries.png');
 }
 
 label {

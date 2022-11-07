@@ -5,6 +5,13 @@ export function renderMushroom() {
     return div;
 }
 
+export function renderBerry() {
+    const div = document.createElement('div');
+    div.classList.add('berry');
+
+    return div;
+}
+
 export function renderFriend(friend) {
     const div = document.createElement('div');
     const nameEl = document.createElement('p');
@@ -29,5 +36,32 @@ export function renderFriend(friend) {
     }
 
     div.append(nameEl, emojiEl);
+    return div;
+}
+
+export function renderAnimal(animal) {
+    const div = document.createElement('div');
+    const animalNameEl = document.createElement('p');
+    const animalEmojiEl = document.createElement('p');
+
+    div.classList.add('animal');
+    animalNameEl.classList.add('name');
+    animalEmojiEl.classList.add('emoji');
+
+    animalNameEl.textContent = animal.name;
+
+    if (animal.satisfaction === 1) {
+        animalEmojiEl.textContent = '🐱';
+    }
+
+    if (animal.satisfaction === 2) {
+        animalEmojiEl.textContent = '🐻';
+    }
+
+    if (animal.satisfaction === 3) {
+        animalEmojiEl.textContent = '🐵';
+    }
+
+    div.append(animalNameEl, animalEmojiEl);
     return div;
 }
