@@ -44,6 +44,16 @@ const animalData = [
     {
         name: 'Scooby Doo',
         satisfaction: 2,
+    },
+
+    {
+        name: 'Scrappy Doo',
+        satisfaction: 1,
+    },
+
+    {
+        name: 'Dock',
+        satisfaction: 3,
     }
 
 ];
